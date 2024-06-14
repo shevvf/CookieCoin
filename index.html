@@ -16,15 +16,31 @@
     <link rel="manifest" href="manifest.webmanifest">
 
     <script>
+        if (window.Telegram && window.Telegram.WebApp) {
+            console.log("window.Telegram ready");
+        }
+        else 
+        {
+            console.log("window.Telegram not ready");
+        }
         Telegram.WebApp.ready(); 
-        Telegram.WebApp.expand(); 
+        window.Telegram.WebApp.expand(); 
 
         const platform = Telegram.WebApp.platform;
         console.log('Платформа:', platform);
-        if (platform !== 'ios' && platform !== 'android') {
-            document.getElementById('platform-info').style.display = 'block';
-        } else {
-            document.getElementById('main-content').style.display = 'block';
+
+        const platformInfoElement = document.getElementById('platform-info');
+        const mainContentElement = document.getElementById('main-content');
+
+        if (platformInfoElement && mainContentElement) {
+            if (platform !== 'ios' && platform !== 'android') {
+                platformInfoElement.style.display = 'block';
+            } else {
+                mainContentElement.style.display = 'block';
+            }
+        }
+        else {
+            console.error('Elements with id "platform-info" or "main-content" not found in DOM.');
         }
     </script>
 
