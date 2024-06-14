@@ -27,10 +27,10 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-
+            console.log(Telegram.WebApp.isExpanded);
         window.Telegram.WebApp.ready();
         window.Telegram.WebApp.expand(); 
-
+        console.log(Telegram.WebApp.isExpanded);
         const platform = Telegram.WebApp.platform;
         console.log('Платформа:', platform);
 
