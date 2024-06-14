@@ -15,7 +15,11 @@
 
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script>
+        Telegram.WebApp.ready(); 
         Telegram.WebApp.expand(); 
+
+        const platform = Telegram.WebApp.platform;
+        console.log('Платформа:', platform);
     </script>
 </head>
 <body>
