@@ -15,7 +15,9 @@
 
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script>
-        Telegram.WebApp.expand();
+        document.addEventListener('DOMContentLoaded', function() {
+            Telegram.WebApp.expand();
+        });
     </script>
 </head>
 <body>
