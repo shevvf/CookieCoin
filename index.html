@@ -24,7 +24,7 @@
             display: none;
         }
     </style>
-    
+
     <script>
         if (window.Telegram && window.Telegram.WebApp) {
             console.log("window.Telegram ready");
@@ -33,7 +33,7 @@
         {
             console.log("window.Telegram not ready");
         }
-        Telegram.WebApp.ready(); 
+        window.Telegram.WebApp.ready();
         window.Telegram.WebApp.expand(); 
 
         const platform = Telegram.WebApp.platform;
