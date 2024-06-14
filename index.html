@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>CookieClicker</title>
+    <meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+    <link rel="stylesheet" href="Graphics/main.css">
+    <link rel="stylesheet" href="Graphics/loading-screen.css">
+    <link rel="stylesheet" href="Graphics/unity-canvas.css">
+    <link rel="manifest" href="manifest.webmanifest">
+</head>
+<body>
+    <div id="loading-screen">
+        <div id="shadow"></div>
+        <div class="logo"></div>
+        <div class="progress-container">
+            <div id="progress-bar"></div>
+            <span id="progress-text">0%</span>
+        </div>
+        <div id="company-name">
+            <span>shevf</span>
+        </div>
+        <div id="version-number">
+            <span>v1.0</span>
+        </div>
+    </div>
+    <div id="unity-container" class="unity-desktop">
+        <canvas id="unity-canvas"></canvas>
+    </div>
+    <script src="Core/loading-screen.js"></script>
+</body>
+</html>
