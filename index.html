@@ -14,50 +14,21 @@
     <link rel="stylesheet" href="Graphics/loading-screen.css">
     <link rel="stylesheet" href="Graphics/unity-canvas.css">
     <link rel="manifest" href="manifest.webmanifest">
-    <style>
-        #platform-info {
-            display: none;
-            text-align: center;
-            margin-top: 20%;
-        }
-        #main-content {
-            display: none;
-        }
-    </style>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log(Telegram.WebApp.isExpanded);
+    document.addEventListener('DOMContentLoaded', function() {
+        
         window.Telegram.WebApp.ready();
-        window.Telegram.WebApp.expand(); 
-        console.log(Telegram.WebApp.isExpanded);
-        const platform = Telegram.WebApp.platform;
-        console.log('Платформа:', platform);
-
-        const platformInfoElement = document.getElementById('platform-info');
-        const mainContentElement = document.getElementById('main-content');
-
-      //  if (platformInfoElement && mainContentElement) {
-      //      if (platform !== 'ios' && platform !== 'android') {
-      //          platformInfoElement.style.display = 'block';
-      //      } else {
-      //          mainContentElement.style.display = 'block';
-      //      }
-      //  }
-      //  else {
-      //      console.error('Elements with id "platform-info" or "main-content" not found in DOM.');
-      //  } 
+        window.Telegram.WebApp.expand();         
     });
     </script>
-
-
 </head>
 
 <body>
-    <!-- <div id="platform-info">
+    <div id="platform-info">
         <h1>Пожалуйста, используйте мобильное устройство</h1>
         <img src="Graphics/background.jpg" alt="Play on mobile" style="width: 100%; height: auto;">
-    </div> -->
+    </div>
     <div id="loading-screen">
         <div id="shadow"></div>
         <div class="logo"></div>
@@ -75,6 +46,19 @@
     <div id="unity-container" class="unity-desktop">
         <canvas id="unity-canvas"></canvas>
     </div>
-    <script src="Core/loading-screen.js"></script>
+    <!-- <script src="Core/loading-screen.js"></script> -->
+    <script>
+        const platformInfoElement = document.getElementById('platform-info');
+        const platform = Telegram.WebApp.platform;
+   
+            if (platform !== 'ios' && platform !== 'android') {
+                platformInfoElement.style.display = 'block';
+            } else {
+                const script = document.createElement('script');
+                script.src = 'Core/loading-screen.js';
+                document.body.appendChild(script);
+            }
+
+    </script>
 </body>
 </html>
