@@ -1,9 +1,9 @@
-const cacheName = "kiippl-CookieClicker-1.0";
+const cacheName = "shevf-CookieClicker-1.0";
 const contentToCache = [
-    "Build/5b9d7702d77d0846765a43fd0d996b9a.loader.js",
-    "Build/b23df975f8e5254d744e590fde34094d.framework.js.unityweb",
-    "Build/efa52e190ec40ecc1847188b1d917688.data.unityweb",
-    "Build/c8c6fb337f4579c9fface19ee25385fa.wasm.unityweb",
+    "Build/CookieClicker.loader.js",
+    "Build/CookieClicker.framework.js.unityweb",
+    "Build/CookieClicker.data.unityweb",
+    "Build/CookieClicker.wasm.unityweb",
     "Graphics/loading-screen.css",
     "Graphics/main.css",
     "Graphics/unity-canvas.css"
