@@ -31,7 +31,6 @@ canvas {
     height: 100%;
     z-index: 0;
 }
-
 #platform-info {
     display: none;
     position: fixed;
