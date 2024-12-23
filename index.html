@@ -16,14 +16,13 @@
     <link rel="manifest" href="manifest.webmanifest">
 
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        
-        window.Telegram.WebApp.ready();
-        window.Telegram.WebApp.expand();         
-    });
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            window.Telegram.WebApp.ready();
+            window.Telegram.WebApp.expand();         
+        });
     </script>
 </head>
-
 <body>
     <div id="platform-info">
         <h1>Пожалуйста, используйте мобильное устройство</h1>
@@ -37,7 +36,7 @@
             <span id="progress-text">0%</span>
         </div>
         <div id="company-name">
-            <span>shevf</span>
+            <span>kiippl</span>
         </div>
         <div id="version-number">
             <span>v1.0</span>
@@ -46,11 +45,10 @@
     <div id="unity-container" class="unity-desktop">
         <canvas id="unity-canvas"></canvas>
     </div>
-    <!-- <script src="Core/loading-screen.js"></script> -->
+
     <script>
         const platformInfoElement = document.getElementById('platform-info');
-        const platform = Telegram.WebApp.platform;
-   
+        const platform = Telegram.WebApp.platform;   
             if (platform !== 'ios' && platform !== 'android') {
                 platformInfoElement.style.display = 'block';
             } else {
@@ -58,7 +56,6 @@
                 script.src = 'Core/loading-screen.js';
                 document.body.appendChild(script);
             }
-
     </script>
 </body>
 </html>

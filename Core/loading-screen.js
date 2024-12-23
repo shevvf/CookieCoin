@@ -12,13 +12,13 @@
   const progressText = document.getElementById("progress-text");
 
   var buildUrl = "Build";
-  var loaderUrl = buildUrl + "/CookieClicker.loader.js";
+  var loaderUrl = buildUrl + "/66111aa68dab7f57170d26b3463b70e4.loader.js";
   var config = {
-    dataUrl: buildUrl + "/CookieClicker.data.unityweb",
-    frameworkUrl: buildUrl + "/CookieClicker.framework.js.unityweb",
-    codeUrl: buildUrl + "/CookieClicker.wasm.unityweb",
+    dataUrl: buildUrl + "/5befeddbfbe40014545f80364eec3694.data.unityweb",
+    frameworkUrl: buildUrl + "/f9b087cc67ed62bd38c2a172fd0a5203.framework.js.unityweb",
+    codeUrl: buildUrl + "/92625fa1492d671e667dbdadda48b15a.wasm.unityweb",
     streamingAssetsUrl: "StreamingAssets",
-    companyName: "shevf",
+    companyName: "kiippl",
     productName: "CookieClicker",
     productVersion: "1.0",
   };
